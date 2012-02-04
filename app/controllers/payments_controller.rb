@@ -1,6 +1,4 @@
 class PaymentsController < ApplicationController
-  REALM = "realm_a9e8fah49fbera49f2983n293nnid"
-  USERS = { "naruto137" => "9eef70aa2f885a47c7005a35fd0941a7" }
   before_filter :auth, :except => [:new, :create, :thanks]
   
   # GET /payments
@@ -95,7 +93,7 @@ class PaymentsController < ApplicationController
   
   def auth
     authenticate_or_request_with_http_digest(REALM) do |username|
-      USERS[username]
+      USERS_TABLE[username]
     end
   end
   
