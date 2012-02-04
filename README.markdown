@@ -4,4 +4,4 @@
 A Rails app that can collect credit card payments through Stripe
 and will text you whenever you receive a payment.
 
-[Demo](http://WiiConductor.com)
+[Demo Project: paymenow.herokuapp.com](http://paymenow.herokuapp.com)
