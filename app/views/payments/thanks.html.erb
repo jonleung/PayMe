@@ -1,0 +1,17 @@
+<div class="container-fluid">
+<div class="well span5">
+
+<h1 style="font-size:25px">Thanks <%= @payment.name %>!</h1><br>
+	<p id="notice"><%= notice %></p>
+	<p>I have received your
+		<strong>
+			<%= number_to_currency(@payment.amount) %>
+		</strong>
+		transaction!
+	</p>
+	<p>Thanks!</p>
+	<br>
+	<%= link_to 'Go Back', root_path, :class => "btn" %>
+</div> <!-- /well -->
+</div> <!-- /container -->
+

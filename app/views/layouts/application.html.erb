@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>Pay <%= YOUR_NAME %></title>
+	<link REL="SHORTCUT ICON" HREF="http://src.sencha.io/16/16/http://graph.facebook.com/FriendJonathanLeung/picture">
+	<%= tag :meta, :name => "stripe_public_key", :content => STRIPE_PUBLIC_KEY %>
+	<%= tag :meta, :name => "person_name", :content => YOUR_NAME %>
+	<%= javascript_include_tag "https://js.stripe.com/v1/", "application" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
