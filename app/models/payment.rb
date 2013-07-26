@@ -7,7 +7,6 @@ class Payment < ActiveRecord::Base
   
   def save_with_payment
       if valid?
-        debugger
         charge = Stripe::Charge.create(amount: (amount*100).to_i, currency: "usd", card: stripe_card_token, description: "#{name}, #{email}")
         save!
       end
